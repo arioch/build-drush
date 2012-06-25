@@ -1,0 +1,19 @@
+Vagrant::Config.run do |config|
+  config.vm.share_folder "v-data", "/home/vagrant/build", "../"
+
+  config.vm.define :drushbuild do |drushbuild_config|
+    drushbuild_config.vm.box = "debian6-64-envpuppet"
+    drushbuild_config.vm.box_url = "http://files.penumbra.be/vagrant/debian6-64-envpuppet-latest.box"
+    drushbuild_config.vm.host_name = "drushbuild.labs.penumbra.be"
+    drushbuild_config.vm.network :hostonly, "192.168.97.11"
+
+    drushbuild_config.vm.provision :puppet do |puppet|
+      puppet.manifests_path = "manifests"
+      puppet.module_path = "modules"
+      puppet.manifest_file = "build.pp"
+    end
+  end
+end
+
+# -*- mode: ruby -*-
+# vi: set ft=ruby :

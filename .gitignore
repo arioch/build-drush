@@ -1,0 +1,8 @@
+*.rpm
+*.swp
+.DS_Store
+build/*.rpm
+build/tmp
+packages/*/*/*.rpm
+tmp
+vagrant/.vagrant

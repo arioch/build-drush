@@ -1,0 +1,15 @@
+drush-7.x-5.4
+drush-7.x-5.3
+drush-7.x-5.2
+drush-7.x-5.1
+drush-7.x-5.0
+
+drush-7.x-4.6
+drush-7.x-4.5
+drush-7.x-4.4
+drush-7.x-4.3
+drush-7.x-4.0
+
+drush-6.x-3.3
+drush-6.x-3.2
+drush-6.x-3.1
