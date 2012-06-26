@@ -3,3 +3,5 @@ all:
 
 jenkins:
 	/bin/bash build.sh
+	find . -iname '*.rpm'
+
