@@ -20,7 +20,7 @@ do
   echo -e "\e[1;34m[\e[00m --- \e[00;32mBuild package: ${DRUSH}\e[00m --- \e[1;34m]\e[00m"
   if [ ! -f tmp/${DRUSH}.tar.gz ]; then wget -P tmp/ ${DRUSH_URL}; fi
   if [ -d tmp/drush ]; then rm -rf tmp/drush; fi
-  tar xvzf tmp/${DRUSH}.tar.gz -C tmp/
+  tar xzf tmp/${DRUSH}.tar.gz -C tmp/
   chmod 751 tmp/drush/drush
 
   fpm -s dir -t rpm --architecture noarch \

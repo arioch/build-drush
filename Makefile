@@ -3,5 +3,5 @@ all:
 
 jenkins:
 	/bin/bash build.sh
-	find . -iname '*.rpm'
+	find . -iname '*.rpm' | sort
 
